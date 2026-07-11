@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Variables */
+  --color-primary: #0d2b45;
+  --color-secondary: #f97316;
+  --color-tertiary: #facc15;
+  --color-background: #f9f9ff;
+  --color-surface-lowest: #ffffff;
+  --color-surface-high: #e1e8fd;
+  --color-outline: #73777e;
+  --color-outline-variant: #c3c6ce;
+  --color-text-dark: #111827;
+  --color-text-muted: #6b7280;
+
+  /* Spacing Tokens */
+  --spacing-scale-xs: 4px;
+  --spacing-scale-sm: 8px;
+  --spacing-scale-md: 16px;
+  --spacing-scale-lg: 24px;
+  --spacing-scale-xl: 48px;
+  --spacing-scale-xxl: 80px;
+  --spacing-container-max: 1320px;
+  --spacing-margin-desktop: 40px;
+  --spacing-margin-mobile: 16px;
+
+  /* Custom typography defaults */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Shadows and Interactions */
+.custom-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.custom-shadow-hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.hover-lift {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
